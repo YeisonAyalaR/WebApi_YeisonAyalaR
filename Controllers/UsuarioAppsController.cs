@@ -21,14 +21,14 @@ namespace WebApi_YeisonAyalaR.Controllers
             _context = context;
         }
 
-        // GET: api/UsuarioApps
+        //api/UsuarioApps
         [HttpGet]
         public async Task<ActionResult<IEnumerable<UsuarioApp>>> GetUsuarioApp()
         {
             return await _context.Usuarios.ToListAsync();
         }
 
-        // GET: api/UsuarioApps/1
+        //api/UsuarioApps/1
         [HttpGet("{id}")]
         public async Task<ActionResult<UsuarioApp>> GetUsuarioApp(int id)
         {
@@ -42,11 +42,9 @@ namespace WebApi_YeisonAyalaR.Controllers
             return usuarioApp;
         }
 
-
-
-        // POST: api/UsuarioApps
+        //api/UsuarioApps
         [HttpPost]
-        public async Task<ActionResult<string>> PostUsuarioApp(UsuarioApp usuarioApp)
+        public async Task<ActionResult<string>> CreaUsuarioApp(UsuarioApp usuarioApp)
         {
             try
             {
