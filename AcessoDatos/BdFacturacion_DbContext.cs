@@ -26,5 +26,8 @@ namespace WebApi_YeisonAyalaR.AcessoDatos
         public BdFacturacion_DbContext(DbContextOptions<BdFacturacion_DbContext> o) : base(o) { }
 
         public DbSet<UsuarioApp> Usuarios { get; set; }
+        public DbSet<Producto> Productos { get; set; }
+        public DbSet<DetalleFactura> DetalleFacturas { get; set; }
+        public DbSet<WebApi_YeisonAyalaR.Models.Factura> Factura { get; set; }
     }
 }

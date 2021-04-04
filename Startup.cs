@@ -60,7 +60,7 @@ namespace WebApi_YeisonAyalaR
 
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Servicios WebApi - Yeison Ayala R");
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "WebApi - Yeison Ayala R");
                 c.RoutePrefix = "api";
             });
         }
