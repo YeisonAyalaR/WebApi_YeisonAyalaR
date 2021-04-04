@@ -28,6 +28,7 @@ namespace WebApi_YeisonAyalaR.AcessoDatos
         public DbSet<UsuarioApp> Usuarios { get; set; }
         public DbSet<Producto> Productos { get; set; }
         public DbSet<DetalleFactura> DetalleFacturas { get; set; }
-        public DbSet<WebApi_YeisonAyalaR.Models.Factura> Factura { get; set; }
+        public DbSet<Factura> Facturas { get; set; }
+        public DbSet<Cliente> Clientes { get; set; }
     }
 }

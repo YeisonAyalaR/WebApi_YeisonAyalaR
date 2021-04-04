@@ -21,21 +21,21 @@ namespace WebApi_YeisonAyalaR.Controllers
             _context = context;
         }
 
-        // GET: api/Facturas
+        //api/Facturas
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Factura>>> GetFactura()
         {
-            return await _context.Factura.ToListAsync();
+            return await _context.Facturas.ToListAsync();
         }
 
-        // GET: api/Facturas/5
+        //api/Facturas/5
         [HttpGet("{id}")]
         public ActionResult<FromFactura> GetFactura(int id)
         {
             try
             {
                 FromFactura factura = new FromFactura();
-                factura = (from f in _context.Factura
+                factura = (from f in _context.Facturas
                            where f.IdFactura == id
                            select new FromFactura
                            {
@@ -100,7 +100,7 @@ namespace WebApi_YeisonAyalaR.Controllers
                 }
                 else
                 {
-                    _context.Factura.Add(factura);
+                    _context.Facturas.Add(factura);
 
                     foreach (var item in factura.detalleFacturas)
                     {
@@ -133,14 +133,14 @@ namespace WebApi_YeisonAyalaR.Controllers
         {
             try
             {
-                var factura = await _context.Factura.FindAsync(id);
+                var factura = await _context.Facturas.FindAsync(id);
 
                 if (factura == null)
                 {
                     throw new Exception("Factura no encontrada !!!", new Exception("Factura no encontrada !!!"));
                 }
 
-                _context.Factura.Remove(factura);
+                _context.Facturas.Remove(factura);
                 await _context.SaveChangesAsync();
 
                 return Ok(new { success = true, message = "Factura Eliminado con exito!!!" });

@@ -7,16 +7,16 @@ using System.Threading.Tasks;
 
 namespace WebApi_YeisonAyalaR.Models
 {
-    [Table("UsuarioApp")]
-    public class UsuarioApp
+    [Table("Cliente")]
+    public class Cliente
     {
         [Key]
-        public Int32 IdUsuario { get; set; }
+        public Int32 IdCliente { get; set; }
         public String Nombres { get; set; }
         public String Apellidos { get; set; }
-        public String Usuario { get; set; }
-        public String Clave { get; set; }
-        public Int32 Estado { get; set; }
-
+        public DateTime FechaNacimiento { get; set; }
+        public String Direccion { get; set; }
+        public String Celular { get; set; }
+        public String Correo { get; set; }
     }
 }

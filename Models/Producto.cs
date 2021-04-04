@@ -11,9 +11,9 @@ namespace WebApi_YeisonAyalaR.Models
     public class Producto
     {
         [Key]
-        public int IdProducto { get; set; }
+        public Int32 IdProducto { get; set; }
         public String NombreProducto { get; set; }
-        public double PrecioUnitario { get; set; }
+        public Double PrecioUnitario { get; set; }
         public Int32 StockMin { get; set; }
         public Int32 StockMax { get; set; }
         public Int32 Saldo { get; set; }
